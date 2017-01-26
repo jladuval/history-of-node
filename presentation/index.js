@@ -29,9 +29,6 @@ import preloader from "spectacle/lib/utils/preloader";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
-// Import custom component
-import Interactive from "../assets/interactive";
-
 import Marquee from 'react-marquee'
 
 // Require CSS
@@ -42,9 +39,34 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   netscape: require('../assets/netscape.jpg'),
   brendan: require('../assets/brendan_eich.jpg'),
-  js1995: require('../assets/js_1995_logo.png'),
-  nodejsServer: require('../assets/nodejs_server.png'),
-  ryan: require('../assets/ryan_dahl.jpg')
+  js: require('../assets/js.png'),
+  ryan: require('../assets/ryan_dahl.jpg'),
+  ecma: require('../assets/ecma.jpg'),
+  es1: require('../assets/es1.jpg'),
+  es2: require('../assets/es2.jpg'),
+  es3: require('../assets/es3.jpg'),
+  firefox: require('../assets/firefox.png'),
+  fontaine: require('../assets/fontaine.jpg'),
+  guillermo: require('../assets/guillermo.jpg'),
+  ie: require('../assets/ie.png'),
+  internet: require('../assets/internet.jpg'),
+  iojs: require('../assets/iojs.png'),
+  isaac: require('../assets/isaac.png'),
+  jesse: require('../assets/jessejames.jpg'),
+  joyent: require('../assets/joyent.png'),
+  kermit: require('../assets/kermit.jpg'),
+  leftpad: require('../assets/leftpad.png'),
+  nodejs: require('../assets/nodejs.png'),
+  sinking: require('../assets/sinking.jpg'),
+  sun: require('../assets/sun.jpg'),
+  tj: require('../assets/tj.jpg'),
+  whatHappened: require('../assets/whatHappened.png'),
+  yahoo: require('../assets/yahoo.jpg'),
+  contributors: require('../assets/contributors.png'),
+  crockford: require('../assets/crockford.jpg'),
+  darkAges: require('../assets/darkages.jpg'),
+  children: require('../assets/children.jpg'),
+  es4: require('../assets/es4.jpg')
 };
 
 preloader(images);
@@ -96,7 +118,7 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="primary">
             <Layout>
               <Fit>
                 <Image
@@ -105,7 +127,7 @@ export default class Presentation extends React.Component {
                 />
               </Fit>
               <Fill>
-                <Heading size={1} caps fit>
+                <Heading textColor="black" size={4} caps fit>
                   Brendan Eich
                 </Heading>
               </Fill>
@@ -142,23 +164,30 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.brendan} height="293px"
+                  src={images.sun} height="293px"
                   margin="0 40px 0"
                 />
               </Fit>
               <Fill>
-                <Heading size={1} caps fit>
-                  Javascript
-                </Heading>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>You know what everyone will always love... java</Quote>
+                </BlockQuote>
               </Fill>
             </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading>Javascript</Heading>
+            <Image
+              src={images.js}
+            />      
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black">
             <Layout>
               <Fit>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.ie} height="293px"
                 />
               </Fit>
               <Fill>
@@ -173,7 +202,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.ie} height="293px"
                 />
               </Fit>
               <Fill>
@@ -196,11 +225,11 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="primary">
             <Layout>
               <Fit>
                 <Image
-                  src={images.brendan} height="293px"
+                  src={images.crockford} height="293px"
                   margin="0 40px 0"
                 />
               </Fit>
@@ -212,11 +241,11 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide bgDarken={0.75}>
+          <Slide bgImage={images.kermit} bgDarken={0.5}>
             <Heading>
               JScript == Javascript
             </Heading>
-            <Text>(pretty much)</Text>
+            <Text textColor="white">(pretty much)</Text>
           </Slide>
           
           <Slide transition={["slide"]} bgColor="primary">
@@ -232,7 +261,7 @@ export default class Presentation extends React.Component {
               </Fill>
               <Fill>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.ie} height="293px"
                 />
               </Fill>
             </Layout>
@@ -242,7 +271,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.ecma} width="300px" margin="100px 0 0 0"
                 />
               </Fit>
               <Fill>
@@ -272,7 +301,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.ie} height="293px"
                 />
               </Fit>
               <Fill>
@@ -289,17 +318,17 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fill>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.es1} height="293px"
                 />
               </Fill>
               <Fill>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.es2} height="293px"
                 />
               </Fill>
               <Fill>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.es3} height="293px"
                 />
               </Fill>
             </Layout>
@@ -309,7 +338,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.ie} height="293px"
                 />
               </Fit>
               <Fill>
@@ -324,7 +353,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.internet} height="293px"
                 />
               </Fit>
               <Fill>
@@ -335,9 +364,12 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="black" bgImage={images.darkAges} bgDarken={0.5}>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               The JS Dark Ages
+            </Heading>
+            <Heading size={2} caps fit textColor="primary" textFont="primary">
+              1999 - 
             </Heading>
           </Slide>
 
@@ -347,7 +379,7 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="black" bgImage={images.sinking} bgDarken={0.5}>
             <Layout>
               <Fit>
                 <Image
@@ -362,7 +394,7 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="white">
             <Layout>
               <Fit>
                 <Image
@@ -371,32 +403,38 @@ export default class Presentation extends React.Component {
               </Fit>
               <Fill>
                <Image
-                  src={images.netscape} height="293px"
+                  src={images.firefox} height="293px"
                 />
               </Fill>
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="black" bgImage={images.sinking} bgDarken={0.5}>
             <Layout>
               <Fit>
                 <Image
-                  src={images.brendan} height="293px"
+                  src={images.crockford} height="293px"
                 />
               </Fit>
               <Fill>
                <Image
-                  src={images.netscape} height="293px"
+                  src={images.yahoo} height="293px"
                 />
               </Fill>
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="black" bgImage={images.children} bgDarken={0.5}>
+            <Heading size={2} caps fit textColor="primary" textFont="primary">
+              ES????
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
             <Layout>
               <Fit>
                 <Image
-                  src={images.brendan} height="293px"
+                  src={images.jesse} height="293px"
                   margin="0 40px 0"
                 />
               </Fit>
@@ -408,13 +446,13 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit>
               AJAX
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit>
               The Javascript Renaissance
             </Heading>
@@ -454,8 +492,8 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={1} caps fit>
+          <Slide transition={["slide"]} bgColor="White">
+            <Heading size={1} caps fit textColor="primary">
               WEB 2.0
             </Heading>
           </Slide>
@@ -466,7 +504,7 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="black" bgImage={images.es4} bgDarken={0.5}>
             <Heading caps fit size={1} textColor="primary">
               HARMONY
             </Heading>
@@ -475,7 +513,7 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="white">
             <Layout>
               <Fit>
                 <Image
@@ -484,22 +522,22 @@ export default class Presentation extends React.Component {
                 />
               </Fit>
               <Fill>
-                <Heading size={1} caps fit>
+                <Heading size={1} caps fit textColor="primary">
                   Ryan Dahl
                 </Heading>
               </Fill>
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="white">
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.ryan} width="300px" 
                 />
               </Fit>
               <Fill>
-                <BlockQuote textSize={"20px"}>
+                <BlockQuote textSize={"20px"} textColor="primary">
                   <Quote>I wrote 8000 lines of C code so that you peasants can stop blocking your threads with I/O</Quote>
                 </BlockQuote>
               </Fill>
@@ -510,7 +548,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.internet} width="400px"
                 />
               </Fit>
               <Fill>
@@ -521,7 +559,7 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="white">
             <Layout>
               <Fit>
                 <Image
@@ -529,7 +567,7 @@ export default class Presentation extends React.Component {
                 />
               </Fit>
               <Fill>
-                <BlockQuote textSize={"20px"}>
+                <BlockQuote textSize={"20px"} textColor="primary">
                   <Quote>It's called node and you write it in javascript</Quote>
                 </BlockQuote>
               </Fill>
@@ -540,7 +578,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.internet} height="293px"
                 />
               </Fit>
               <Fill>
@@ -551,17 +589,17 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="white">
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.isaac} height="293px"
                 />
               </Fit>
               <Fill>
-                <BlockQuote textSize={"20px"}>
+                <BlockQuote textSize={"20px"} textColor="primary">
                   <Quote>Check this out, I call it npm</Quote>
-                  <Cite>Isaac Schlueter</Cite>
+                  <Cite textColor="primary">Isaac Schlueter</Cite>
                 </BlockQuote>
               </Fill>
             </Layout>
@@ -571,60 +609,62 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.internet} height="293px"
                 />
               </Fit>
               <Fill>
                 <BlockQuote textSize={"20px"}>
                   <Quote>lol..javascript...</Quote>
+                  <Cite>but less enthusiastic</Cite>
                 </BlockQuote>
               </Fill>
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="white">
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.tj} height="293px"
                 />
               </Fit>
               <Fill>
                 <BlockQuote textSize={"20px"}>
-                  <Quote>Check this out, I call it express</Quote>
-                  <Cite>TJ Holowaychuk, 2010</Cite>
+                  <Quote textColor="primary">Check this out, I call it express</Quote>
+                  <Cite textColor="primary">TJ Holowaychuk, 2010</Cite>
                 </BlockQuote>
               </Fill>
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="white">
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.guillermo} height="293px"
                 />
               </Fit>
               <Fill>
                 <BlockQuote textSize={"20px"}>
-                  <Quote>Check this out, I call it socket.io</Quote>
-                  <Cite>Guillermo Rauch, 2010</Cite>
+                  <Quote textColor="primary">Check this out, I call it socket.io</Quote>
+                  <Cite textColor="primary">Guillermo Rauch, 2010</Cite>
                 </BlockQuote>
               </Fill>
             </Layout>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black">
-             <Heading caps fit size={1} textColor="primary">
-              Strong community
+             <Heading caps size={2} textColor="primary">
+              Ain't no one talking anymore sh*t
             </Heading>
             <Image
-              src={images.ryan}
+              src={images.contributors}
+              width="800px"
             />
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps size={1} textColor="primary">
+             <Heading caps size={1} textColor="black">
               2011
             </Heading>
             <Text size={1} caps textColor="black">
@@ -653,12 +693,13 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-           <Slide transition={["slide"]} bgColor="black">
+           <Slide transition={["slide"]} bgColor="white">
              <Heading caps fit size={1} textColor="primary">
               Ummmm... Ryan?
             </Heading>
             <Image
-              src={images.ryan}
+              width="800px"
+              src={images.whatHappened}
             />
           </Slide>
 
@@ -682,7 +723,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps size={1} textColor="primary">
+             <Heading caps size={1} textColor="black">
               2013
             </Heading>
             <Text size={1} caps textColor="black">
@@ -710,7 +751,7 @@ export default class Presentation extends React.Component {
               2014
             </Heading>
             <Appear fid="1">
-              <Heading size={1} caps  textColor="black">
+              <Heading size={1} caps  textColor="white">
                 POWER STRUGGLES
               </Heading>
             </Appear>
@@ -720,26 +761,26 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.joyent} width="293px" margin="80px 0 0 0"
                 />
               </Fit>
               <Fill>
-                <BlockQuote textSize={"20px"}>
+                <BlockQuote textSize={"20px"} >
                   <Quote>Node needs to be stable, reliable, and dependable.</Quote>
                 </BlockQuote>
               </Fill>
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="white">
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.isaac} height="293px"
                 />
               </Fit>
               <Fill>
-                <BlockQuote textSize={"20px"}>
+                <BlockQuote textSize={"20px"} textColor="primary">
                   <Quote>Node needs to be fast and scrappy, and keep moving as quickly as possible.</Quote>
                 </BlockQuote>
               </Fill>
@@ -750,7 +791,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
+                  src={images.fontaine} height="293px"
                   margin="0 40px 0"
                 />
               </Fit>
@@ -762,12 +803,12 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="primary">
             <Layout>
               <Fit>
                 <Image
-                  src={images.ryan} height="293px"
-                  margin="0 40px 0"
+                  src={images.iojs} height="293px"
+                  margin="50px 0 0 0"
                 />
               </Fit>
               <Fill>
@@ -779,11 +820,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps size={1} textColor="primary">
+             <Heading caps size={1} textColor="white">
               iojs
             </Heading>
             <Text size={1} caps textColor="black">
-              Uber immediately puts it straight into production (easy there)
+              Uber immediately puts it straight into production
             </Text>
             <Appear fid="1">
               <Text size={1} caps  textColor="black">
@@ -807,7 +848,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fill>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.nodejs} height="293px"
                 />
               </Fill>
               <Fill>
@@ -815,7 +856,7 @@ export default class Presentation extends React.Component {
               </Fill>
               <Fill>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.iojs} height="293px"
                 />
               </Fill>
             </Layout>
@@ -824,12 +865,12 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="black">
             <Heading caps fit>IOJS wins</Heading>
             <Image
-                src={images.netscape} height="293px"
+                src={images.iojs} height="293px"
               />
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps size={1} textColor="primary">
+             <Heading caps size={1} textColor="white">
               2015
             </Heading>
             <Text size={1} caps textColor="black">
@@ -853,25 +894,25 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading caps>How to break npm</Heading>
+          <Slide transition={["slide"]} bgColor="white">
+            <Heading textColor="primary" caps>How to break npm</Heading>
             <Layout>
               <Fill>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.leftpad} height="293px"
                 />
               </Fill>
               <Fill>
-                <Heading>+</Heading>
+                <Heading textColor="black">+</Heading>
               </Fill>
               <Fill>
-                <Text>npm unpublish</Text>
+                <Heading textColor="black">npm unpublish</Heading>
               </Fill>
             </Layout>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps size={1} textColor="primary">
+             <Heading caps size={1} textColor="black">
               2016 (the year of facebook)
             </Heading>
             <Text size={1} caps textColor="black">
