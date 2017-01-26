@@ -72,11 +72,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              <blink>The blink tag</blink>
+            <Heading className="blink" size={2} caps fit textColor="primary" textFont="primary">
+              The Blink Tag
             </Heading>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-               <Marquee text="The marquee tag is a very important element that all developers should learn how to use. It is the large knife in the swiss army knife of a web developers toolkit." />
+            <Heading size={4} caps textColor="primary" textFont="primary">
+               <Marquee hoverToStop={true} loop={true} text="The marquee tag is a very important element that all developers should learn how to use. It is the large knife in the swiss army knife of a web developers toolkit." />
             </Heading>
            
           </Slide>
@@ -624,7 +624,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps fit size={1} textColor="primary">
+             <Heading caps size={1} textColor="primary">
               2011
             </Heading>
             <Text size={1} caps textColor="black">
@@ -663,7 +663,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps fit size={1} textColor="primary">
+             <Heading caps size={1} textColor="black">
               2012
             </Heading>
             <Text size={1} caps textColor="black">
@@ -682,7 +682,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps fit size={1} textColor="primary">
+             <Heading caps size={1} textColor="primary">
               2013
             </Heading>
             <Text size={1} caps textColor="black">
@@ -779,7 +779,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps fit size={1} textColor="primary">
+             <Heading caps size={1} textColor="primary">
               iojs
             </Heading>
             <Text size={1} caps textColor="black">
@@ -829,7 +829,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps fit size={1} textColor="primary">
+             <Heading caps size={1} textColor="primary">
               2015
             </Heading>
             <Text size={1} caps textColor="black">
@@ -854,7 +854,7 @@ export default class Presentation extends React.Component {
           </Slide>
           
           <Slide transition={["slide"]} bgColor="black">
-            <Heading caps fit>How to break npm</Heading>
+            <Heading caps>How to break npm</Heading>
             <Layout>
               <Fill>
                 <Image
@@ -871,7 +871,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-             <Heading caps fit size={1} textColor="primary">
+             <Heading caps size={1} textColor="primary">
               2016 (the year of facebook)
             </Heading>
             <Text size={1} caps textColor="black">
@@ -892,6 +892,12 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="black">
             <Heading size={1} caps fit>
               2017 (you are here)
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={1}>
+              @jladuval if I got anything wrong
             </Heading>
           </Slide>
         </Deck>

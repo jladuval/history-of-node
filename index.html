@@ -7,6 +7,28 @@
   <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/prism/1.3.0/themes/prism-tomorrow.css">
+  <style>
+    .blink {
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-name: blink;
+    }
+    
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 1;
+        }
+        76% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+  </style>
 </head>
 <body>
   <div id="root"></div>
