@@ -580,12 +580,43 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
+                  src={images.ryan} width="300px" margin="50px 0 0 0"
+                />
+              </Fit>
+              <Fill>
+                <Text size={1} caps textColor="black">
+                  Flickr's upload progress bar
+                </Text>
+                <Appear fid="1">
+                  <Text size={1} caps  textColor="black">
+                    Ruby was insanely slow
+                  </Text>
+                </Appear>
+                <Appear fid="2">
+                  <Text size={1}  caps textColor="black">
+                    Wrote a small server in C
+                  </Text>
+                </Appear>
+                <Appear fid="3">
+                  <Text size={1} caps  textColor="black">
+                    No one wanted to use C, but javascript was popular
+                  </Text>
+                </Appear>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+            <Layout>
+              <Fit>
+                <Image
                   src={images.ryan} width="300px" margin="120px 0 0 0"
                 />
               </Fit>
               <Fill>
                 <BlockQuote textSize={"20px"} textColor="primary">
                   <Quote>I wrote 8000 lines of C code so that you peasants can stop blocking your threads with I/O</Quote>
+                  <Cite>JsConf EU</Cite>
                 </BlockQuote>
               </Fill>
             </Layout>
