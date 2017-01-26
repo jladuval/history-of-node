@@ -44,7 +44,7 @@ const images = {
   brendan: require('../assets/brendan_eich.jpg'),
   js1995: require('../assets/js_1995_logo.png'),
   nodejsServer: require('../assets/nodejs_server.png'),
-  ryan: require('../assets/ryan_dahl.jpg'),
+  ryan: require('../assets/ryan_dahl.jpg')
 };
 
 preloader(images);
@@ -227,8 +227,8 @@ export default class Presentation extends React.Component {
                   src={images.netscape} height="293px"
                 />
               </Fill>
-                <Heading>VS</Heading>
               <Fill>
+                <Heading>VS</Heading>
               </Fill>
               <Fill>
                 <Image
@@ -285,7 +285,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading caps fit>Browser wars</Heading>
+            <Heading caps fit>Ecmascript</Heading>
             <Layout>
               <Fill>
                 <Image
@@ -421,34 +421,36 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <Text size={4} caps fit textColor="black">
+            <Text size={1} caps textColor="black">
               Jquery
             </Text>
             <Appear fid="1">
-              <Text size={4} caps fit textColor="black">
+              <Text size={1} caps  textColor="black">
                 Dojo
               </Text>
             </Appear>
             <Appear fid="2">
-              <Text size={4} caps fit textColor="black">
+              <Text size={1}  caps textColor="black">
                 YUI
               </Text>
             </Appear>
             <Appear fid="3">
-              <Text size={4} caps fit textColor="black">
+              <Text size={1} caps  textColor="black">
                 Prototype
               </Text>
             </Appear>
             <Appear fid="4">
-              <Text size={4} caps fit textColor="black">
-                Mootools
-              </Text>
-              <Text size={4} caps fit textColor="black">
-                MochiKit
-              </Text>
-              <Text size={4} caps fit textColor="black">
-                Scriptaculous
-              </Text>
+              <div>
+                <Text size={1} caps textColor="black">
+                  Mootools
+                </Text>
+                <Text size={1}  caps textColor="black">
+                  MochiKit
+                </Text>
+                <Text size={1} caps textColor="black">
+                  Scriptaculous
+                </Text>
+              </div>
             </Appear>
           </Slide>
 
@@ -466,19 +468,10 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["slide"]} bgColor="black">
             <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-                ~~ES3.1~~
-                ES5
-              `}
-            </Markdown>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
               HARMONY
+            </Heading>
+            <Heading caps fit size={2} textColor="primary">
+              ES3.1 == ES5
             </Heading>
           </Slide>
 
@@ -486,7 +479,7 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.brendan} height="293px"
+                  src={images.ryan} height="293px"
                   margin="0 40px 0"
                 />
               </Fit>
@@ -502,64 +495,403 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fit>
                 <Image
-                  src={images.netscape} height="293px"
+                  src={images.ryan} height="293px"
                 />
               </Fit>
               <Fill>
                 <BlockQuote textSize={"20px"}>
-                  <Quote>How about no</Quote>
+                  <Quote>I wrote 8000 lines of C code so that you peasants can stop blocking your threads with I/O</Quote>
                 </BlockQuote>
               </Fill>
             </Layout>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>That is a great idea</Quote>
+                </BlockQuote>
+              </Fill>
+            </Layout>
           </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
 
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>It's called node and you write it in javascript</Quote>
+                </BlockQuote>
+              </Fill>
+            </Layout>
           </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>LOL JAVASCRIPT. No thanks.</Quote>
+                </BlockQuote>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>Check this out, I call it npm</Quote>
+                  <Cite>Isaac Schlueter</Cite>
+                </BlockQuote>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>lol..javascript...</Quote>
+                </BlockQuote>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>Check this out, I call it express</Quote>
+                  <Cite>TJ Holowaychuk, 2010</Cite>
+                </BlockQuote>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>Check this out, I call it socket.io</Quote>
+                  <Cite>Guillermo Rauch, 2010</Cite>
+                </BlockQuote>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+             <Heading caps fit size={1} textColor="primary">
+              Strong community
             </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
+            <Image
+              src={images.ryan}
+            />
           </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
-            </List>
-          </Slide>
+
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
+             <Heading caps fit size={1} textColor="primary">
+              2011
             </Heading>
-            <Interactive/>
+            <Text size={1} caps textColor="black">
+              Windows Support
+            </Text>
+            <Appear fid="1">
+              <Text size={1} caps  textColor="black">
+                linkedIn
+              </Text>
+            </Appear>
+            <Appear fid="2">
+              <Text size={1}  caps textColor="black">
+                Uber
+              </Text>
+            </Appear>
+            <Appear fid="3">
+              <Text size={1} caps  textColor="black">
+                npm 1.0
+              </Text>
+            </Appear>
           </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={1} caps fit>
+              2012
+            </Heading>
+          </Slide>
+
+           <Slide transition={["slide"]} bgColor="black">
+             <Heading caps fit size={1} textColor="primary">
+              Ummmm... Ryan?
+            </Heading>
+            <Image
+              src={images.ryan}
+            />
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+             <Heading caps fit size={1} textColor="primary">
+              2012
+            </Heading>
+            <Text size={1} caps textColor="black">
+              Isaac steps in as head of node
+            </Text>
+            <Appear fid="1">
+              <Text size={1} caps  textColor="black">
+                v0.8 - Performance for a bunch of I/O tasks increases by almost 50%
+              </Text>
+            </Appear>
+            <Appear fid="2">
+              <Text size={1}  caps textColor="black">
+                Hapi
+              </Text>
+            </Appear>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+             <Heading caps fit size={1} textColor="primary">
+              2013
+            </Heading>
+            <Text size={1} caps textColor="black">
+              MEAN stack
+            </Text>
+            <Appear fid="1">
+              <Text size={1} caps  textColor="black">
+                Ebay starts using node
+              </Text>
+            </Appear>
+            <Appear fid="2">
+              <Text size={1}  caps textColor="black">
+                Paypal start using node
+              </Text>
+            </Appear>
+            <Appear fid="3">
+              <Text size={1} caps  textColor="black">
+                koa released
+              </Text>
+            </Appear>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={1} caps fit>
+              2014
+            </Heading>
+            <Appear fid="1">
+              <Heading size={1} caps  textColor="black">
+                POWER STRUGGLES
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>Node needs to be stable, reliable, and dependable.</Quote>
+                </BlockQuote>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                />
+              </Fit>
+              <Fill>
+                <BlockQuote textSize={"20px"}>
+                  <Quote>Node needs to be fast and scrappy, and keep moving as quickly as possible.</Quote>
+                </BlockQuote>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                  margin="0 40px 0"
+                />
+              </Fit>
+              <Fill>
+                <Heading size={1} caps fit>
+                  T.J. Fontaine
+                </Heading>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Layout>
+              <Fit>
+                <Image
+                  src={images.ryan} height="293px"
+                  margin="0 40px 0"
+                />
+              </Fit>
+              <Fill>
+                <Heading size={1} caps fit>
+                  iojs
+                </Heading>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+             <Heading caps fit size={1} textColor="primary">
+              iojs
+            </Heading>
+            <Text size={1} caps textColor="black">
+              Uber immediately puts it straight into production (easy there)
+            </Text>
+            <Appear fid="1">
+              <Text size={1} caps  textColor="black">
+                Latest version of V8
+              </Text>
+            </Appear>
+            <Appear fid="2">
+              <Text size={1}  caps textColor="black">
+                Semantic Versioning
+              </Text>
+            </Appear>
+            <Appear fid="3">
+              <Text size={1} caps  textColor="black">
+                Open Governance
+              </Text>
+            </Appear>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+            <Heading caps fit>Place your bets now</Heading>
+            <Layout>
+              <Fill>
+                <Image
+                  src={images.netscape} height="293px"
+                />
+              </Fill>
+              <Fill>
+                <Heading>VS</Heading>
+              </Fill>
+              <Fill>
+                <Image
+                  src={images.netscape} height="293px"
+                />
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading caps fit>IOJS wins</Heading>
+            <Image
+                src={images.netscape} height="293px"
+              />
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+             <Heading caps fit size={1} textColor="primary">
+              2015
+            </Heading>
+            <Text size={1} caps textColor="black">
+              iojs and node will merge
+            </Text>
+            <Appear fid="1">
+              <Text size={1} caps  textColor="black">
+                Node will opt for an open governance model
+              </Text>
+            </Appear>
+            <Appear fid="2">
+              <Text size={1}  caps textColor="black">
+                And we will go from 0.12 to v4...
+              </Text>
+            </Appear>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={1} caps fit>
+              2016
+            </Heading>
+          </Slide>
+          
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading caps fit>How to break npm</Heading>
+            <Layout>
+              <Fill>
+                <Image
+                  src={images.netscape} height="293px"
+                />
+              </Fill>
+              <Fill>
+                <Heading>+</Heading>
+              </Fill>
+              <Fill>
+                <Text>npm unpublish</Text>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+             <Heading caps fit size={1} textColor="primary">
+              2016 (the year of facebook)
+            </Heading>
+            <Text size={1} caps textColor="black">
+              yarn
+            </Text>
+            <Appear fid="1">
+              <Text size={1} caps  textColor="black">
+                graphql
+              </Text>
+            </Appear>
+            <Appear fid="2">
+              <Text size={1}  caps textColor="black">
+                React starts dominating everything
+              </Text>
+            </Appear>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={1} caps fit>
+              2017 (you are here)
             </Heading>
           </Slide>
         </Deck>
